@@ -10,7 +10,7 @@ class Config():
         self.data_root_dir = os.path.join(self.sys_home_dir, 'datasets/birefv1')
 
         # TASK settings
-        self.task = ['DIS5K', 'COD', 'HRSOD', 'General', 'General-2K', 'Matting'][0]
+        self.task = ['DIS5K', 'COD', 'HRSOD', 'General', 'General-2K', 'Matting'][3]
         self.testsets = {
             # Benchmarks
             'DIS5K': ','.join(['DIS-VD', 'DIS-TE1', 'DIS-TE2', 'DIS-TE3', 'DIS-TE4']),
@@ -26,7 +26,7 @@ class Config():
             'DIS5K': ['DIS-TR', 'DIS-TR+DIS-TE1+DIS-TE2+DIS-TE3+DIS-TE4'][0],
             'COD': 'TR-COD10K+TR-CAMO',
             'HRSOD': ['TR-DUTS', 'TR-HRSOD', 'TR-UHRSD', 'TR-DUTS+TR-HRSOD', 'TR-DUTS+TR-UHRSD', 'TR-HRSOD+TR-UHRSD', 'TR-DUTS+TR-HRSOD+TR-UHRSD'][5],
-            'General': ['SRZ-TR'][0],
+            'General': ['SLZ-TR'][0],
             'General-2K': datasets_all,
             'Matting': datasets_all,
         }[self.task]
